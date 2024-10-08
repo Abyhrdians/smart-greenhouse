@@ -24,6 +24,10 @@
             margin: 0;
         }
 
+        .timer {
+            font-size: 18px;
+        }
+
         nav {
             margin: 20px 0;
         }
@@ -92,6 +96,7 @@
 <body>
     <header>
         <h1>Welcome to the Smart Greenhouse System</h1>
+        <div class="timer" id="timer">Date & Time: 00/00/0000 00:00:00</div>
     </header>
     <nav>
         <a href="{{ route('monitor') }}">Go to Monitoring</a>
@@ -114,5 +119,31 @@
         </ul>
         <img src="https://images.unsplash.com/photo-1566492129428-5cf1f8e1b40b" alt="Smart Greenhouse">
     </section>
+
+    <script>
+        // JavaScript to implement the running timer with current date and time in Indonesian timezone (WIB)
+        function updateTime() {
+            const now = new Date();
+            const options = { 
+                year: 'numeric', 
+                month: '2-digit', 
+                day: '2-digit', 
+                hour: '2-digit', 
+                minute: '2-digit', 
+                second: '2-digit', 
+                hour12: false 
+            };
+
+            // Set time zone to WIB (UTC+7)
+            const indonesianTime = now.toLocaleString('en-ID', { timeZone: 'Asia/Jakarta', ...options });
+
+            document.getElementById('timer').textContent = 'Date & Time: ' + indonesianTime;
+        }
+
+        // Update time every second
+        setInterval(updateTime, 1000);
+        // Initial call to display the time immediately
+        updateTime();
+    </script>
 </body>
 </html>
