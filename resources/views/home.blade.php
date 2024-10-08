@@ -66,6 +66,27 @@
             justify-content: center;
             flex-wrap: wrap;
         }
+
+        section {
+            padding: 20px;
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            margin: 20px auto;
+            max-width: 800px;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 10px;
+            margin-top: 20px;
+        }
+
+        ul {
+            list-style-type: disc;
+            padding-left: 20px;
+        }
     </style>
 </head>
 <body>
@@ -76,5 +97,22 @@
         <a href="{{ route('monitor') }}">Go to Monitoring</a>
         <a href="{{ route('control') }}">Go to Control</a>
     </nav>
+    <section>
+        <h2>About Our Smart Greenhouse</h2>
+        <p>
+            Our Smart Greenhouse is designed to optimize plant growth and health using advanced technology. 
+            With real-time monitoring and control of environmental conditions, you can ensure your plants receive the best care.
+        </p>
+        <p>
+            Key features include:
+        </p>
+        <ul>
+            <li>Automated watering and nutrient delivery</li>
+            <li>Real-time temperature, humidity, and light monitoring</li>
+            <li>Remote control via web interface or mobile app</li>
+            <li>Data analytics for optimizing growth conditions</li>
+        </ul>
+        <img src="https://images.unsplash.com/photo-1566492129428-5cf1f8e1b40b" alt="Smart Greenhouse">
+    </section>
 </body>
 </html>
