@@ -119,6 +119,7 @@
         </ul>
         <img src="https://images.unsplash.com/photo-1566492129428-5cf1f8e1b40b" alt="Smart Greenhouse">
     </section>
+<<<<<<< HEAD
 
     <script>
         // JavaScript to implement the running timer with current date and time in Indonesian timezone (WIB)
@@ -145,5 +146,7 @@
         // Initial call to display the time immediately
         updateTime();
     </script>
+=======
+>>>>>>> aa37071782d3e21971eda6a2a0c12dbd6cd2627b
 </body>
 </html>
