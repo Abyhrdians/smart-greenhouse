@@ -8,6 +8,10 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+Route::get('/test', function () {
+    return response()->file(public_path('css/styles.css'));
+});
+
 // Routes for the greenhouse application
 Route::get('/', [GreenhouseController::class, 'index'])->name('home');
 Route::get('/monitor', [GreenhouseController::class, 'monitor'])->name('monitor');

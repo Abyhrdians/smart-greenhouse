@@ -4,52 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Greenhouse Monitoring</title>
-    <style>
-        /* CSS Styles */
-        body {
-            font-family: Arial, sans-serif;
-            margin: 20px;
-            padding: 20px;
-            background-color: #f0f0f0;
-        }
-        h1 {
-            color: #4CAF50;
-        }
-        a {
-            display: inline-block;
-            margin-top: 20px;
-            padding: 10px 15px;
-            background-color: #4CAF50;
-            color: white;
-            text-decoration: none;
-            border-radius: 5px;
-        }
-        a:hover {
-            background-color: #45a049;
-        }
-        .sensor-data {
-            background: white;
-            padding: 15px;
-            border-radius: 8px;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-            margin-bottom: 20px;
-        }
-        .row {
-            display: flex;
-            justify-content: space-between;
-        }
-        .col {
-            flex: 1;
-            margin: 10px;
-        }
-        .widget {
-            background: white;
-            padding: 15px;
-            border-radius: 8px;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-            text-align: center;
-        }
-    </style>
+    <link rel="stylesheet" href="{{ asset('css/styles.css') }}">
 </head>
 <body>
     <h1>Greenhouse Monitoring</h1>
@@ -99,22 +54,6 @@
         </div>
     </section>
 
-    <script>
-        // JavaScript for dynamic updates (example)
-        document.addEventListener('DOMContentLoaded', function() {
-            // Example function to update sensor data
-            function updateSensorData() {
-                // Fetch new data from API or server
-                // For demonstration, using static data
-                const newData = {
-                    temperature: 27,
-                    humidity: 65,
-                    co2: 850
-                };
-
-                // Update the DOM elements with new data
-                document.getElementById('temp-data').innerText = `${newData.temperature}°C`;
-                document.getElementById('humidity-data').innerText = `${newData.humidity}%`;
-                document.getElementById('co2-data').innerText = `${newData.co2} ppm`;
-
-                // Update the meter
+    <script src="{{ asset('js/script.js') }}"></script>
+</body>
+</html>
